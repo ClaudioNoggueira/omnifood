@@ -1,0 +1,96 @@
+// TYPOGRAPHY
+$font-size-delivered-text: 1.8rem;
+$font-size-hero-description: 2rem;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-hero-description: 1.6;
+
+// COLORS
+$background-color-hero: #fdf2e9;
+$border-color-delivered-images: #fdf2e9;
+
+$font-color-delivered-text-span: #cf711f;
+
+// BORDER RADIUS
+$border-radius-delivered-images: 50%;
+
+//  WHITESPACE
+
+.hero {
+    align-items: center;
+    display: grid;
+    gap: 9.6rem;
+
+    grid: {
+        template: {
+            columns: 1fr 1fr;
+        }
+    }
+
+    margin: 0 auto;
+    max-width: 130rem;
+    padding: 0 3.2rem;
+
+    &-description {
+        font: {
+            size: $font-size-hero-description;
+        }
+
+        line-height: $line-height-hero-description;
+        margin-bottom: 4.8rem;
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    &-section {
+        background-color: $background-color-hero;
+        padding: 4.8rem 0 9.6rem 0;
+    }
+}
+
+.delivered {
+
+    &-images {
+        display: flex;
+
+        img {
+            border: 3px solid $border-color-delivered-images {
+                radius: $border-radius-delivered-images;
+            }
+
+            height: 4.8rem;
+            margin-right: -1.6rem;
+            width: 4.8rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &-meals {
+        align-items: center;
+        display: flex;
+        gap: 1.6rem;
+        margin-top: 8rem;
+    }
+
+    &-text {
+        font: {
+            size: $font-size-delivered-text;
+            weight: $font-weight-medium;
+        }
+
+        span {
+            color: $font-color-delivered-text-span;
+
+            font: {
+                weight: $font-weight-bold;
+            }
+        }
+    }
+}
