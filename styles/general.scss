@@ -4,6 +4,7 @@ $font-stack: 'Rubik',
 sans-serif;
 
 $font-size-heading-primary: 5.2rem;
+$font-size-subheading: 1.6rem;
 $font-size-btn: 2rem;
 
 $font-weight-default: 400;
@@ -12,9 +13,11 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 $letter-spacing-heading-primary: -.5px;
+$letter-spacing-subheading: .75px;
 
 $line-height-default: 1;
 $line-height-heading-primary: 1.05;
+$line-height-heading-secondary: 1.2;
 
 // COLORS
 $main-color: #e67e22;
@@ -25,8 +28,9 @@ $background-color-btn--outline-hover: #fdf2e9;
 $background-color-btn--full-hover: #cf711f;
 
 $font-color-body: #555;
-$font-color-heading-primary: #333;
+$font-color-heading: #333;
 $font-color-btn--outline: #555;
+$font-color-subheading: #cf711f;
 
 // SHADOWS
 $shadow-btn--outline-hover: inset 0 0 0 3px #fff;
@@ -92,18 +96,48 @@ body {
 
 // HEADINGS
 .heading {
-    &-primary {
-        color: $font-color-heading-primary;
+    font: {
+        weight: $font-weight-bold;
+    }
 
+    letter-spacing: $letter-spacing-heading-primary;
+
+    &-primary {
         font: {
             size: $font-size-heading-primary;
-            weight: $font-weight-bold;
         }
 
-        letter-spacing: $letter-spacing-heading-primary;
         line-height: $line-height-heading-primary;
         margin-bottom: 32px;
     }
+
+    &-secondary {
+        font: {
+            size: 4.4rem;
+        }
+
+        line-height: $line-height-heading-secondary;
+        margin-bottom: 9.6rem;
+    }
+
+    &-primary,
+    &-secondary {
+        color: $font-color-heading;
+    }
+}
+
+.subheading {
+    color: $font-color-subheading;
+    display: block;
+
+    font: {
+        size: $font-size-subheading;
+        weight: $font-weight-medium;
+    }
+
+    letter-spacing: $letter-spacing-subheading;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
 }
 
 // BUTTONS

@@ -47,13 +47,35 @@ body {
   margin-right: 1.6rem;
 }
 
-.heading-primary {
-  color: #333;
-  font-size: 5.2rem;
+.heading {
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
   line-height: 1.05;
   margin-bottom: 32px;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-primary, .heading-secondary {
+  color: #333;
+}
+
+.subheading {
+  color: #cf711f;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
 }
 
 .btn:link, .btn:visited {
@@ -212,5 +234,9 @@ body {
 
 .how-section {
   padding: 9.6rem 0;
+}
+
+.step-image {
+  width: 50%;
 }
 /*# sourceMappingURL=general.css.map */
