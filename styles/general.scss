@@ -4,6 +4,8 @@ $font-stack: 'Rubik',
 sans-serif;
 
 $font-size-heading-primary: 5.2rem;
+$font-size-heading-secondary: 4.4rem;
+$font-size-heading-tertiary: 3rem;
 $font-size-subheading: 1.6rem;
 $font-size-btn: 2rem;
 
@@ -18,6 +20,7 @@ $letter-spacing-subheading: .75px;
 $line-height-default: 1;
 $line-height-heading-primary: 1.05;
 $line-height-heading-secondary: 1.2;
+$line-height-heading-tertiary: 1.2;
 
 // COLORS
 $main-color: #e67e22;
@@ -74,8 +77,9 @@ body {
 }
 
 .grid {
+    column-gap: 6.4rem;
     display: grid;
-    gap: 9.6rem;
+    row-gap: 8rem;
 
     &--2-cols {
         grid-template-columns: repeat(2, 1fr);
@@ -88,6 +92,10 @@ body {
     &--4-cols {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    &--center-v {
+        align-items: center;
+    }
 }
 
 .margin-right-small {
@@ -96,11 +104,18 @@ body {
 
 // HEADINGS
 .heading {
-    font: {
-        weight: $font-weight-bold;
-    }
 
-    letter-spacing: $letter-spacing-heading-primary;
+    &-primary,
+    &-secondary,
+    &-tertiary {
+        color: $font-color-heading;
+
+        font: {
+            weight: $font-weight-bold;
+        }
+
+        letter-spacing: $letter-spacing-heading-primary;
+    }
 
     &-primary {
         font: {
@@ -113,16 +128,17 @@ body {
 
     &-secondary {
         font: {
-            size: 4.4rem;
+            size: $font-size-heading-secondary;
         }
 
         line-height: $line-height-heading-secondary;
         margin-bottom: 9.6rem;
     }
 
-    &-primary,
-    &-secondary {
-        color: $font-color-heading;
+    &-tertiary {
+        font-size: $font-size-heading-tertiary;
+        line-height: $line-height-heading-tertiary;
+        margin-bottom: 3.2rem;
     }
 }
 
@@ -195,5 +211,5 @@ body {
 @import 'partials/_hero.scss';
 
 // *****************************************************************
-// HERO
+// HOW IT WORKS
 @import 'partials/_how.scss';

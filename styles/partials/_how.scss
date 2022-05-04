@@ -1,8 +1,86 @@
-// *****************************************************************
-// HOW IT WORKS
-// *****************************************************************
+// TYPOGRAPHY
+$font-size-step-number: 8.6rem;
+$font-size-step-description: 1.8rem;
+
+$font-weight-semi-bold: 600;
+
+$line-height-step-description: 1.8;
+
+// COLORS
+$background-color-step-img-box-before: #fdf2e9;
+$background-color-step-img-box-after: #fae5d3;
+
+
+$font-color-step-number: #ddd;
+
+// BORDER RADIUS
+$border-radius-step-img-box: 50%;
+
 .how {
     &-section {
         padding: 9.6rem 0;
+    }
+}
+
+.step {
+    &-number {
+        color: $font-color-step-number;
+
+        font: {
+            size: $font-size-step-number;
+            weight: $font-weight-semi-bold;
+        }
+
+        margin-bottom: 1.2rem;
+    }
+
+
+
+    &-image {
+        width: 35%;
+
+        &-box {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &::before,
+            &::after {
+                border-radius: $border-radius-step-img-box;
+                content: "";
+                display: block;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &::before {
+                background-color: $background-color-step-img-box-before;
+                // height: 60%; Doesn't work
+
+                // 60% of parent's width
+                padding-bottom: 60%;
+                width: 60%;
+                z-index: -2;
+            }
+
+            &::after {
+                background-color: $background-color-step-img-box-after;
+                padding-bottom: 50%;
+                width: 50%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &-description {
+        font: {
+            size: $font-size-step-description;
+        }
+
+        line-height: $line-height-step-description;
     }
 }
