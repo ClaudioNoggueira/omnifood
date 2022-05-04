@@ -60,6 +60,25 @@ body {
   margin-right: 1.6rem;
 }
 
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fdf2e9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 9.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
 .hero {
   -webkit-box-align: center;
       -ms-flex-align: center;

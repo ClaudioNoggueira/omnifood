@@ -1,0 +1,26 @@
+// TYPOGRAPHY
+
+// COLORS
+$main-color: #e67e22;
+$white-color: #fff;
+
+$background-color-header: #fdf2e9;
+
+// SHADOWS
+
+// BORDER RADIUS
+
+//  WHITESPACE
+
+.header {
+    align-items: center;
+    background-color: $background-color-header;
+    display: flex;
+    height: 9.6rem;
+    justify-content: space-between;
+    padding: 0 4.8rem;
+}
+
+.logo {
+    height: 2.2rem;
+}
