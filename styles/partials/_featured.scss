@@ -1,0 +1,44 @@
+// TYPOGRAPHY
+
+$font-size-featured-heading: 1.4rem;
+
+$font-weight-medium: 500;
+
+$letter-spacing-featured-heading: .75px;
+
+// COLORS
+$font-color-featured-heading: #888;
+
+.featured {
+    &-section {
+        padding: 4.8rem 0 3.2rem;
+    }
+
+    &-heading {
+        color: $font-color-featured-heading;
+
+        font: {
+            size: $font-size-featured-heading;
+            weight: $font-weight-medium;
+        }
+
+        letter-spacing: $letter-spacing-featured-heading;
+        margin-bottom: 2.4rem;
+
+        text: {
+            align: center;
+            transform: uppercase;
+        }
+    }
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        filter: brightness(0);
+        height: 3.2rem;
+        opacity: 50%;
+    }
+}
