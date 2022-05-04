@@ -63,6 +63,33 @@ body {
 // *****************************************************************
 // GENERAL REUSABLE COMPONENTS
 // *****************************************************************
+.container {
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 0 3.2rem;
+}
+
+.grid {
+    display: grid;
+    gap: 9.6rem;
+
+    &--2-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--3-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--4-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.margin-right-small {
+    margin-right: 1.6rem;
+}
+
 // HEADINGS
 .heading {
     &-primary {
@@ -79,6 +106,7 @@ body {
     }
 }
 
+// BUTTONS
 .btn {
 
     &:link,
@@ -124,15 +152,14 @@ body {
     }
 }
 
-.margin-right-small {
-    margin-right: 1.6rem;
-}
-
 // *****************************************************************
 // HEADER
 @import 'partials/_header.scss';
 
-
 // *****************************************************************
 // HERO
 @import 'partials/_hero.scss';
+
+// *****************************************************************
+// HERO
+@import 'partials/_how.scss';
