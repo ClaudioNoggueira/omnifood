@@ -1,4 +1,7 @@
 // TYPOGRAPHY
+$font-size-main-nav-link: 1.8rem;
+
+$font-weight-medium: 500;
 
 // COLORS
 $main-color: #e67e22;
@@ -6,9 +9,12 @@ $white-color: #fff;
 
 $background-color-header: #fdf2e9;
 
+$font-color-main-nav-link: #333;
+$font-color-main-nav-link-hover: #cf711f;
 // SHADOWS
 
 // BORDER RADIUS
+$border-radius-nav-cta-link: 8px;
 
 //  WHITESPACE
 
@@ -23,4 +29,48 @@ $background-color-header: #fdf2e9;
 
 .logo {
     height: 2.2rem;
+}
+
+// *****************************************************************
+// NAVIGATION
+.main-nav {
+
+    &-link:link,
+    &-link:visited {
+        color: $font-color-main-nav-link;
+        display: inline-block;
+
+        font: {
+            size: $font-size-main-nav-link;
+            weight: $font-weight-medium;
+        }
+
+        text-decoration: none;
+        transition: all .3s;
+
+        &.nav-cta:link,
+        &.nav-cta:visited {
+            background-color: $main-color;
+            border-radius: $border-radius-nav-cta-link;
+            color: $white-color;
+            padding: 1.2rem 2.4rem;
+        }
+
+        &.nav-cta:hover,
+        &.nav-cta:active {
+            background-color: $font-color-main-nav-link-hover;
+        }
+    }
+
+    &-link:hover,
+    &-link:active {
+        color: $font-color-main-nav-link-hover;
+    }
+
+    &-list {
+        align-items: center;
+        display: flex;
+        gap: 3.2rem;
+        list-style-type: none;
+    }
 }

@@ -79,6 +79,42 @@ body {
   height: 2.2rem;
 }
 
+.main-nav-link:link, .main-nav-link:visited {
+  color: #333;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.main-nav-link:link.nav-cta:link, .main-nav-link:link.nav-cta:visited, .main-nav-link:visited.nav-cta:link, .main-nav-link:visited.nav-cta:visited {
+  background-color: #e67e22;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+}
+
+.main-nav-link:link.nav-cta:hover, .main-nav-link:link.nav-cta:active, .main-nav-link:visited.nav-cta:hover, .main-nav-link:visited.nav-cta:active {
+  background-color: #cf711f;
+}
+
+.main-nav-link:hover, .main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-list {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.2rem;
+  list-style-type: none;
+}
+
 .hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
