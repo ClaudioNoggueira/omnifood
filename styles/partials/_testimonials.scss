@@ -1,0 +1,47 @@
+// TYPOGRAPHY
+$font-size-testimonial-text: 1.8rem;
+$font-size-testimonial-name: 1.6rem;
+
+$line-height-testimonial-text: 1.8;
+
+// COLORS
+$font-color-testimonial-name: #777;
+
+// BORDER RADIUS
+$border-radius-testimonial-image: 50%;
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+
+    &-section {
+        padding: 9.6rem 0;
+    }
+}
+
+.testimonial {
+    &-image {
+        border-radius: $border-radius-testimonial-image;
+        margin-bottom: 1.2rem;
+        width: 6.4rem;
+    }
+
+    &-text {
+        font: {
+            size: $font-size-testimonial-text;
+        }
+
+        margin-bottom: 1.6rem;
+        line-height: $line-height-testimonial-text;
+    }
+
+    &-name {
+        color: $font-color-testimonial-name;
+
+        font: {
+            size: $font-size-testimonial-name;
+        }
+    }
+
+}
