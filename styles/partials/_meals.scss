@@ -3,6 +3,7 @@ $font-size-tag: 1.2rem;
 $font-size-meal-title: 2.4rem;
 $font-size-meal-attribute: 1.8rem;
 $font-size-diet-list-item: 1.8rem;
+$font-size-all-recipes: 1.8rem;
 
 $font-weight-semi-bold: 600;
 
@@ -26,6 +27,12 @@ $border-radius-tag: 100px;
     box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.075);
     border-radius: $border-radius-meal;
     overflow: hidden;
+    transition: all 0.4s;
+
+    &:hover {
+        box-shadow: 0 3.2rem 6.4rem 0 rgba(0, 0, 0, 0.06);
+        transform: translateY(-1rem);
+    }
 
     .tag {
         border-radius: $border-radius-tag;
@@ -128,4 +135,9 @@ $border-radius-tag: 100px;
             width: 3rem;
         }
     }
+}
+
+.all-recipes {
+    text-align: center;
+    font-size: $font-size-all-recipes;
 }

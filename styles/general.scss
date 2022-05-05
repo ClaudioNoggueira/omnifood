@@ -33,6 +33,7 @@ $font-color-body: #555;
 $font-color-heading: #333;
 $font-color-btn--outline: #555;
 $font-color-subheading: #cf711f;
+$font-color-link-hover: #cf711f;
 
 // SHADOWS
 $shadow-btn--outline-hover: inset 0 0 0 3px #fff;
@@ -101,8 +102,33 @@ strong {
     }
 }
 
+.link:link,
+.link:visited {
+    border-bottom: 1px solid currentColor;
+    color: $main-color;
+    display: inline-block;
+    padding-bottom: .2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    border-bottom: 1px solid transparent;
+    color: $font-color-link-hover;
+}
+
+// HELPER CLASSES
 .margin-right-small {
     margin-right: 1.6rem;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 4.8rem;
+}
+
+.center-text {
+    text-align: center;
 }
 
 // HEADINGS
