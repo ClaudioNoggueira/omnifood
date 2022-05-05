@@ -1,0 +1,107 @@
+// TYPOGRAPHY
+$font-size-tag: 1.2rem;
+$font-size-meal-title: 2.4rem;
+$font-size-meal-attribute: 1.8rem;
+
+$font-weight-semi-bold: 600;
+
+// COLORS
+$main-color: #e67e22;
+
+$font-color-tag: #333;
+$font-color-meal-title: #333;
+
+//BORDER RADIUS
+$border-radius-meal: 12px;
+$border-radius-tag: 100px;
+
+.meals {
+    &-section {
+        padding: 9.6rem 0;
+    }
+}
+
+.meal {
+    box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.075);
+    border-radius: $border-radius-meal;
+    overflow: hidden;
+
+    .tag {
+        border-radius: $border-radius-tag;
+        color: $font-color-tag;
+        display: inline-block;
+
+        font: {
+            size: $font-size-tag;
+            weight: $font-weight-semi-bold;
+        }
+
+        padding: .4rem .8rem;
+        text-transform: uppercase;
+
+        &--vegan {
+            background-color: #94d82d;
+        }
+
+        &--vegetarian {
+            background-color: #51cf66;
+        }
+
+        &--paleo {
+            background-color: #fcc419;
+        }
+    }
+
+    &-tags {
+        display: flex;
+        gap: .4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    &-content {
+        padding: 3.6rem {
+            top: 2.4rem;
+        }
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    &-title {
+        color: $font-color-meal-title;
+
+        font: {
+            size: $font-size-meal-title;
+            weight: $font-weight-semi-bold;
+        }
+
+        margin-bottom: 3.2rem;
+    }
+
+    // LIST
+    &-attributes {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style-type: none;
+    }
+
+    // SINGULAR ITEM
+    &-attribute {
+        align-items: center;
+        display: flex;
+
+        font: {
+            size: $font-size-meal-attribute;
+        }
+
+        gap: 1.6rem;
+    }
+
+    &-icon {
+        color: $main-color;
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+}

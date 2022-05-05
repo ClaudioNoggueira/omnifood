@@ -27,7 +27,6 @@ $main-color: #e67e22;
 $white-color: #fff;
 
 $background-color-btn--outline-hover: #fdf2e9;
-
 $background-color-btn--full-hover: #cf711f;
 
 $font-color-body: #555;
@@ -65,6 +64,10 @@ body {
     }
 
     line-height: $line-height-default;
+}
+
+strong {
+    font-weight: $font-weight-medium;
 }
 
 // *****************************************************************
@@ -217,3 +220,7 @@ body {
 // *****************************************************************
 // HOW IT WORKS
 @import 'partials/_how.scss';
+
+// *****************************************************************
+// MEALS
+@import 'partials/_meals.scss';
