@@ -2,7 +2,6 @@
 $font-size-tag: 1.2rem;
 $font-size-meal-title: 2.4rem;
 $font-size-meal-attribute: 1.8rem;
-$font-size-diet-list-item: 1.8rem;
 $font-size-all-recipes: 1.8rem;
 
 $font-weight-semi-bold: 600;
@@ -111,29 +110,6 @@ $border-radius-tag: 100px;
         color: $main-color;
         height: 2.4rem;
         width: 2.4rem;
-    }
-}
-
-.diets {
-    .list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
-        list-style: none;
-
-        &-item {
-            align-items: center;
-            display: flex;
-            font-size: $font-size-diet-list-item;
-            gap: 1.6rem;
-        }
-
-
-        &-icon {
-            color: $main-color;
-            height: 3rem;
-            width: 3rem;
-        }
     }
 }
 

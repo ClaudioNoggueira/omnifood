@@ -1,0 +1,127 @@
+// TYPOGRAPHY
+$font-size-pricing-plan--complete-after: 1.4rem;
+$font-size-plan-name: 2rem;
+$font-size-plan-price: 6.2rem;
+$font-size-plan-price-span: 3rem;
+$font-size-plan-text: 1.6rem;
+
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+
+$letter-spacing-plan-name: 0.75;
+
+$line-height-plan-text: 1.6;
+
+// COLORS
+$background-color-pricing-plan: #fdf2e9;
+$background-color-pricing-plan--complete-after: #ffd43b;
+
+$border-color-pricing-plan-starter: #fdf2e9;
+
+$font-color-pricing-plan--complete-after: #333;
+$font-color-plan-name: #cf711f;
+$font-color-plan-price: #333;
+$font-color-plan-text: #6f6f6f;
+
+// BORDER RADIUS
+$border-radius-pricing-plan: 11px;
+
+.pricing {
+    &-section {
+        padding: 9.6rem 0;
+    }
+
+    &-plan {
+        border-radius: $border-radius-pricing-plan;
+        width: 75%;
+
+        &--starter {
+            border: 2px solid $border-color-pricing-plan-starter;
+            justify-self: end;
+            padding: 4.6rem;
+        }
+
+        &--complete {
+            background-color: $background-color-pricing-plan;
+            overflow: hidden;
+            padding: 4.8rem;
+            position: relative;
+
+            &::after {
+                background-color: $background-color-pricing-plan--complete-after;
+                color: $font-color-pricing-plan--complete-after;
+                content: "Best value";
+
+                font: {
+                    size: $font-size-pricing-plan--complete-after;
+                    weight: $font-weight-bold;
+                }
+
+                padding: .8rem 8rem;
+
+                position: absolute;
+                top: 6%;
+                right: -18%;
+
+                text-transform: uppercase;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.plan {
+    &-header {
+        text-align: center;
+        margin-bottom: 4.8rem;
+    }
+
+    &-name {
+        color: $font-color-plan-name;
+
+        font: {
+            size: $font-size-plan-name;
+            weight: $font-weight-semi-bold;
+        }
+
+        letter-spacing: $letter-spacing-plan-name;
+        margin-bottom: 3.2rem;
+        text-transform: uppercase;
+    }
+
+    &-price {
+        color: $font-color-plan-price;
+
+        font: {
+            size: $font-size-plan-price;
+            weight: $font-weight-semi-bold;
+        }
+
+        margin-bottom: 1.6rem;
+
+        span {
+            font: {
+                size: $font-size-plan-price-span;
+                weight: $font-weight-medium;
+            }
+
+            margin-right: .8rem;
+        }
+    }
+
+    &-text {
+        color: $font-color-plan-text;
+
+        font: {
+            size: $font-size-plan-text;
+        }
+
+        line-height: $line-height-plan-text;
+    }
+
+    &-sign-up {
+        margin-top: 4.8rem;
+    }
+}

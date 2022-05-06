@@ -7,6 +7,7 @@ $font-size-heading-primary: 5.2rem;
 $font-size-heading-secondary: 4.4rem;
 $font-size-heading-tertiary: 3rem;
 $font-size-subheading: 1.6rem;
+$font-size-list-item: 1.8rem;
 $font-size-btn: 2rem;
 
 $font-weight-default: 400;
@@ -231,6 +232,28 @@ strong {
     }
 }
 
+// LISTS
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: none;
+
+    &-item {
+        align-items: center;
+        display: flex;
+        font-size: $font-size-list-item;
+        gap: 1.6rem;
+    }
+
+
+    &-icon {
+        color: $main-color;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
 // *****************************************************************
 // HEADER
 @import 'partials/_header.scss';
@@ -254,3 +277,7 @@ strong {
 // *****************************************************************
 // TESTIMONIALS
 @import 'partials/_testimonials.scss';
+
+// *****************************************************************
+// TESTIMONIALS
+@import 'partials/_pricing.scss';
