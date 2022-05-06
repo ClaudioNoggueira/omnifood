@@ -5,18 +5,28 @@ $font-size-testimonial-name: 1.6rem;
 $line-height-testimonial-text: 1.8;
 
 // COLORS
-$font-color-testimonial-name: #777;
+$background-color-testimonials-section: #fdf2e9;
+
+$font-color-testimonial-name: #6f6f6f;
 
 // BORDER RADIUS
 $border-radius-testimonial-image: 50%;
 
 .testimonials {
+    column-gap: 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4.8rem;
+    row-gap: 4.8rem;
 
     &-section {
-        padding: 9.6rem 0;
+        align-items: center;
+        background-color: $background-color-testimonials-section;
+        display: grid;
+        grid-template-columns: 55fr 45fr;
+    }
+
+    &-container {
+        padding: 9.6rem;
     }
 }
 
@@ -43,5 +53,25 @@ $border-radius-testimonial-image: 50%;
             size: $font-size-testimonial-name;
         }
     }
+}
 
+.gallery {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.6rem;
+
+    &-item {
+        overflow: hidden;
+
+        img {
+            display: block;
+            transition: all 0.4s;
+            width: 100%;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+    }
 }
