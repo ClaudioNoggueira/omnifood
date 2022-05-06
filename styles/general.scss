@@ -84,7 +84,17 @@ strong {
 .grid {
     column-gap: 6.4rem;
     display: grid;
+    // margin-bottom: 9.6rem;
     row-gap: 8rem;
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+
+    // for multiple grids within a container
+    &:not(:last-child) {
+        margin-bottom: 9.6rem;
+    }
 
     &--2-cols {
         grid-template-columns: repeat(2, 1fr);
@@ -121,11 +131,11 @@ strong {
 
 // HELPER CLASSES
 .margin-right-small {
-    margin-right: 1.6rem;
+    margin-right: 1.6rem !important;
 }
 
 .margin-bottom-medium {
-    margin-bottom: 4.8rem;
+    margin-bottom: 4.8rem !important;
 }
 
 .center-text {

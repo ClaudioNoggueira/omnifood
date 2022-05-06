@@ -4,19 +4,26 @@ $font-size-plan-name: 2rem;
 $font-size-plan-price: 6.2rem;
 $font-size-plan-price-span: 3rem;
 $font-size-plan-text: 1.6rem;
+$font-size-plan-details: 1.6rem;
+$font-size-feature-title: 2.4rem;
+$font-size-feature-text: 1.8rem;
 
 $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
-
 $letter-spacing-plan-name: 0.75;
 
 $line-height-plan-text: 1.6;
+$line-height-plan-details: 1.6;
+$line-height-feature-text: 1.8;
 
 // COLORS
+$main-color: #e67e22;
+
 $background-color-pricing-plan: #fdf2e9;
 $background-color-pricing-plan--complete-after: #ffd43b;
+$background-color-feature-icon: #fdf2e9;
 
 $border-color-pricing-plan-starter: #fdf2e9;
 
@@ -24,9 +31,13 @@ $font-color-pricing-plan--complete-after: #333;
 $font-color-plan-name: #cf711f;
 $font-color-plan-price: #333;
 $font-color-plan-text: #6f6f6f;
+$font-color-feature-title: #333;
+
 
 // BORDER RADIUS
 $border-radius-pricing-plan: 11px;
+$border-radius-feature-icon: 50%;
+
 
 .pricing {
     &-section {
@@ -123,5 +134,45 @@ $border-radius-pricing-plan: 11px;
 
     &-sign-up {
         margin-top: 4.8rem;
+    }
+
+    &-details {
+        font: {
+            size: $font-size-plan-details;
+        }
+
+        line-height: $line-height-plan-details;
+        text-align: center;
+    }
+}
+
+.feature {
+    &-icon {
+        background-color: $background-color-feature-icon;
+        border-radius: $border-radius-feature-icon;
+        color: $main-color;
+        height: 3.2rem;
+        margin-bottom: 3.2rem;
+        padding: 1.6rem;
+        width: 3.2rem;
+    }
+
+    &-title {
+        color: $font-color-feature-title;
+
+        font: {
+            size: $font-size-feature-title;
+            weight: $font-weight-bold
+        }
+
+        margin-bottom: 1.6rem;
+    }
+
+    &-text {
+        font: {
+            size: $font-size-feature-text;
+        }
+
+        line-height: $line-height-feature-text;
     }
 }
