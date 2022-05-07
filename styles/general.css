@@ -661,4 +661,29 @@ strong {
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+.cta {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#eb984e), to(#e67e22));
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  border-radius: 11px;
+  -webkit-box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.cta-section {
+  padding: 9.6rem 0;
+}
+
+.cta-image-box {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(235, 151, 78, 0.534)), to(rgba(235, 151, 78, 0.295))), url("../../images/eating.jpg");
+  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.534), rgba(235, 151, 78, 0.295)), url("../../images/eating.jpg");
+  background-position: center;
+  background-size: cover;
+}
 /*# sourceMappingURL=general.css.map */

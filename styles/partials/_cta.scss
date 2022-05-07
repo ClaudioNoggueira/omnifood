@@ -1,0 +1,37 @@
+// COLORS
+$main-color: #e67e22;
+$linear-gradient-first-color-cta: #eb984e;
+$linear-gradient-first-color-cta-image-box: rgba(235, 151, 78, 0.534);
+$linear-gradient-second-color-cta-image-box: rgba(235, 151, 78, 0.295);
+
+// BORDER RADIUS
+$border-radius-cta: 11px;
+
+// SHADOWS
+$box-shadow-cta: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
+
+.cta {
+    // background-color: $main-color;
+    background-image: linear-gradient(to right bottom, $linear-gradient-first-color-cta, $main-color);
+    border-radius: $border-radius-cta;
+    box-shadow: $box-shadow-cta;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    height: 50rem;
+    overflow: hidden;
+
+    &-section {
+        padding: 9.6rem 0;
+    }
+
+    &-text-box {}
+
+    &-image-box {
+        background: {
+            image: linear-gradient(to right bottom, $linear-gradient-first-color-cta-image-box, $linear-gradient-second-color-cta-image-box), url('../../images/eating.jpg');
+            position: center;
+            size: cover;
+        }
+    }
+}
