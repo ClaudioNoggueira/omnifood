@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+*:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(230, 125, 34, 0.534);
+          box-shadow: 0 0 0 3px rgba(230, 125, 34, 0.534);
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -122,9 +128,12 @@ strong {
   text-transform: uppercase;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
   display: inline-block;
+  font-family: inherit;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
@@ -151,6 +160,20 @@ strong {
   background-color: #fdf2e9;
   -webkit-box-shadow: inset 0 0 0 3px #fff;
           box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .list {
@@ -672,18 +695,90 @@ strong {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  height: 50rem;
   overflow: hidden;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
 }
 
 .cta-section {
   padding: 9.6rem 0;
 }
 
+.cta-text-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta-text-box .cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
 .cta-image-box {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(235, 151, 78, 0.534)), to(rgba(235, 151, 78, 0.295))), url("../../images/eating.jpg");
-  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.534), rgba(235, 151, 78, 0.295)), url("../../images/eating.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(235, 151, 78, 0.334)), to(rgba(235, 151, 78, 0.295))), url("../../images/eating.jpg");
+  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.334), rgba(235, 151, 78, 0.295)), url("../../images/eating.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.cta-form {
+  -webkit-column-gap: 3.2rem;
+          column-gap: 3.2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  background-color: #fdf2e9;
+  border: none;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.cta-form input::-webkit-input-placeholder,
+.cta-form select::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.cta-form input:-ms-input-placeholder,
+.cta-form select:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.cta-form input::-ms-input-placeholder,
+.cta-form select::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.cta-form input::placeholder,
+.cta-form select::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(253, 242, 233, 0.527);
+          box-shadow: 0 0 0 3px rgba(253, 242, 233, 0.527);
+  outline: none;
 }
 /*# sourceMappingURL=general.css.map */

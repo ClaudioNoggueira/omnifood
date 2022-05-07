@@ -1,7 +1,7 @@
 // TYPOGRAPHY
 // font families: 
 $font-stack: 'Rubik',
-sans-serif;
+    sans-serif;
 
 $font-size-heading-primary: 5.2rem;
 $font-size-heading-secondary: 4.4rem;
@@ -29,15 +29,20 @@ $white-color: #fff;
 
 $background-color-btn--outline-hover: #fdf2e9;
 $background-color-btn--full-hover: #cf711f;
+$background-color-btn--form: #45260a;
+$background-color-btn--form-hover: #fff;
 
 $font-color-body: #555;
 $font-color-heading: #333;
 $font-color-btn--outline: #555;
+$font-color-btn--form: #fdf2e9;
+$font-color-btn--form-hover: #555;
 $font-color-subheading: #cf711f;
 $font-color-link-hover: #cf711f;
 
 // SHADOWS
-$shadow-btn--outline-hover: inset 0 0 0 3px #fff;
+$box-shadow-btn--outline-hover: inset 0 0 0 3px #fff;
+$box-shadow--focus: 0 0 0 3px rgba(230, 125, 34, 0.534);
 
 // BORDER RADIUS
 $border-radius-btn: 8px;
@@ -48,6 +53,11 @@ $border-radius-btn: 8px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    &:focus {
+        box-shadow: $box-shadow--focus;
+        outline: none;
+    }
 }
 
 html {
@@ -199,12 +209,18 @@ strong {
 // BUTTONS
 .btn {
 
+    &,
     &:link,
     &:visited {
-        border-radius: $border-radius-btn;
+        border: none {
+            radius: $border-radius-btn;
+        }
+
+        cursor: pointer;
         display: inline-block;
 
         font: {
+            family: inherit;
             size: $font-size-btn;
             weight: $font-weight-semi-bold
         }
@@ -238,7 +254,19 @@ strong {
         background-color: $background-color-btn--outline-hover;
 
         // Add border inside
-        box-shadow: $shadow-btn--outline-hover;
+        box-shadow: $box-shadow-btn--outline-hover;
+    }
+
+    &--form {
+        align-self: end;
+        background-color: $background-color-btn--form;
+        color: $font-color-btn--form;
+        padding: 1.2rem;
+
+        &:hover {
+            background-color: $background-color-btn--form-hover;
+            color: $font-color-btn--form-hover;
+        }
     }
 }
 

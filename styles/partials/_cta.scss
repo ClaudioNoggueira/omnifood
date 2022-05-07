@@ -1,14 +1,35 @@
+// TYPOGRAPHY
+$font-size-cta-text: 1.8rem;
+$font-size-cta-form-label: 1.6rem;
+$font-size-cta-form-input: 1.8rem;
+
+$font-weight-medium: 500;
+
+$line-height-cta-text: 1.8;
+
+
 // COLORS
 $main-color: #e67e22;
+
+$background-color-cta-form-input: #fdf2e9;
+
+$font-color-cta-text-box: #45260a;
+$font-color-cta-form-input-placeholder: #aaa;
+
 $linear-gradient-first-color-cta: #eb984e;
-$linear-gradient-first-color-cta-image-box: rgba(235, 151, 78, 0.534);
+$linear-gradient-first-color-cta-image-box: rgba(235, 151, 78, 0.334);
 $linear-gradient-second-color-cta-image-box: rgba(235, 151, 78, 0.295);
+
 
 // BORDER RADIUS
 $border-radius-cta: 11px;
+$border-radius-form-input: 9px;
+
 
 // SHADOWS
 $box-shadow-cta: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
+$box-shadow-cta-form-input: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$box-shadow--focus: 0 0 0 3px rgba(253, 242, 233, 0.527);
 
 .cta {
     // background-color: $main-color;
@@ -17,15 +38,31 @@ $box-shadow-cta: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
     box-shadow: $box-shadow-cta;
     display: grid;
     grid-template-columns: 2fr 1fr;
-
-    height: 50rem;
     overflow: hidden;
+
+    .heading-secondary {
+        // color: inherit;
+        color: $font-color-cta-text-box;
+        margin-bottom: 3.2rem;
+    }
 
     &-section {
         padding: 9.6rem 0;
     }
 
-    &-text-box {}
+    &-text-box {
+        color: $font-color-cta-text-box;
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+        .cta-text {
+            font: {
+                size: $font-size-cta-text;
+            }
+
+            line-height: $line-height-cta-text;
+            margin-bottom: 4.8rem;
+        }
+    }
 
     &-image-box {
         background: {
@@ -33,5 +70,52 @@ $box-shadow-cta: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.15);
             position: center;
             size: cover;
         }
+    }
+
+    &-form {
+        column-gap: 3.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2.4rem;
+
+        label {
+            display: block;
+
+            font: {
+                size: $font-size-cta-form-label;
+                weight: $font-weight-medium;
+            }
+
+            margin-bottom: 1.2rem;
+        }
+
+        input,
+        select {
+            background-color: $background-color-cta-form-input;
+
+            border: none {
+                radius: $border-radius-form-input;
+            }
+
+            box-shadow: $box-shadow-cta-form-input;
+            color: inherit;
+
+            font: {
+                family: inherit;
+                size: $font-size-cta-form-input;
+            }
+
+            padding: 1.2rem;
+            width: 100%;
+
+            &::placeholder {
+                color: $font-color-cta-form-input-placeholder;
+            }
+        }
+    }
+
+    & *:focus {
+        box-shadow: $box-shadow--focus;
+        outline: none;
     }
 }
