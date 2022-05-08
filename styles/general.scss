@@ -118,6 +118,10 @@ strong {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    &--5-cols {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
     &--center-v {
         align-items: center;
     }
@@ -323,3 +327,7 @@ strong {
 // *****************************************************************
 // CALL TO ACTION
 @import 'partials/_cta.scss';
+
+// *****************************************************************
+// FOOTER
+@import 'partials/_footer.scss';
