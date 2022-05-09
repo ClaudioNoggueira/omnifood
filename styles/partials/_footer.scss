@@ -1,3 +1,112 @@
+// TYPOGRAPHY
+$font-size-footer-heading: 1.8rem;
+$font-size-footer-link: 1.6rem;
+$font-size-footer-copyright: 1.4rem;
+$font-size-footer-contacts: 1.6rem;
+
+$font-weight-medium: 500;
+
+$line-height-copyright: 1.6;
+$line-height-contacts: 1.6;
+
+
+// COLORS
+$font-color-footer-link: #767676;
+$font-color-footer-link-hover: #555;
+$font-color-footer-copyright: #767676;
+
 .footer {
-    padding: 9.6rem 0;
+
+    & {
+        border-top: 1px solid #eee;
+        padding: 12.8rem 0;
+
+        .column {
+            &-logo {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .social {
+            &-links {
+                display: flex;
+                gap: 2.4rem;
+                list-style: none;
+            }
+
+            &-icon {
+                height: 2.4rem;
+                width: 2.4rem;
+            }
+        }
+
+        .copyright {
+            color: $font-color-footer-copyright;
+
+            font: {
+                size: $font-size-footer-copyright;
+            }
+
+            line-height: $line-height-copyright;
+
+            // Push copyright text all the way to the bottom of the column
+            margin-top: auto;
+        }
+
+        .contacts {
+            font: {
+                size: $font-size-footer-contacts;
+                style: normal;
+            }
+
+            line-height: $line-height-contacts;
+
+            .address {
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+
+    &--grid {
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    }
+
+    &-logo {
+        display: block;
+        margin-bottom: 3.2rem;
+    }
+
+    &-heading {
+        font: {
+            size: $font-size-footer-heading;
+            weight: $font-weight-medium;
+        }
+
+        margin-bottom: 4rem;
+    }
+
+    &-navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        list-style: none;
+    }
+
+    &-link:link,
+    &-link:visited {
+        color: $font-color-footer-link;
+
+        font: {
+            size: $font-size-footer-link;
+        }
+
+        text-decoration: none;
+        transform: all 0.3s;
+    }
+
+    &-link:hover,
+    &-link:active {
+        color: $font-color-footer-link-hover;
+    }
 }
