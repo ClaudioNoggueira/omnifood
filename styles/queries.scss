@@ -1,10 +1,11 @@
 // rem and em do NOT depend on html font-size in media queries
 // Instead, 1rem = 1em = 16px
 
+$desktop-smaller: 84em;
+$landscape-tablets: 75em;
+
 // *****************************************************************
 // BELOW 1344px
-
-$desktop-smaller: 84em;
 
 @media (max-width: $desktop-smaller) {
     $font-size-heading-primary: 4.4rem;
@@ -25,5 +26,52 @@ $desktop-smaller: 84em;
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// *****************************************************************
+// BELOW 1200px
+@media (max-width: $landscape-tablets) {
+    $font-size-heading-secondary: 3.6rem;
+    $font-size-heading-tertiary: 2.4rem;
+
+    html {
+        // 9px / 16px
+        font-size: 56.25%;
+    }
+
+    .grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+
+    .heading {
+        &-secondary {
+            font: {
+                size: $font-size-heading-secondary;
+            }
+        }
+
+        &-tertiary {
+            font: {
+                size: $font-size-heading-tertiary;
+            }
+        }
+    }
+
+    .header {
+        padding: 0 3.2rem;
+    }
+
+    .main-nav-list {
+        gap: 3.2rem;
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .testimonials-container {
+        padding: 9.6rem 3.2rem;
     }
 }
