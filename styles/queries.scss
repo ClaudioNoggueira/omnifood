@@ -4,6 +4,7 @@
 $desktop-smaller: 84em;
 $tablets-landscape: 75em;
 $tablets-portrait: 59em;
+$tablets-smaller: 44em;
 
 // *****************************************************************
 // BELOW 1344px
@@ -215,6 +216,54 @@ $tablets-portrait: 59em;
 
         & .mobile-nav-icon[name="menu-outline"] {
             display: none;
+        }
+    }
+}
+
+// *****************************************************************
+// BELOW 704px
+@media (max-width: $tablets-smaller) {
+    .grid {
+
+        &--3-cols,
+        &--4-cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .heading {
+        &-secondary {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    .diets {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .pricing-plan {
+        width: 100%;
+    }
+
+    .footer--grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .column {
+
+        &-logo,
+        &-address {
+            grid-column: span 3;
+        }
+
+        &-navigation {
+            grid: {
+                column: span 2;
+                row: 1;
+            }
+
+            margin-bottom: 3.2rem;
         }
     }
 }
