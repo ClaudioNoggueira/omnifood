@@ -81,6 +81,7 @@ $tablets-portrait: 59em;
 // BELOW 944px
 @media (max-width: $tablets-portrait) {
     $font-size-step-number: 7.4rem;
+    $font-size-main-nav-link: 3rem;
 
     $line-height-list-item: 1.5;
 
@@ -147,6 +148,73 @@ $tablets-portrait: 59em;
 
         .btn--form {
             margin-top: 1.2rem;
+        }
+    }
+
+    // *****************************************************************
+    // MOBILE NAVIGATION
+    .mobile-nav {
+        &-button {
+            display: block;
+        }
+    }
+
+    .main-nav {
+        & {
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            transform: translateX(100%);
+            transition: all 0.5s ease-in;
+            width: 100%;
+
+            // HIDE NAVIGATION
+            // display:none allows NO transition
+
+            // 1 - Hide it visually
+            opacity: 0;
+
+            // 2 - Make it unaccessible to mouse and keyboard
+            pointer-events: none;
+
+            // 3 - Hide it from screen readers
+            visibility: hidden;
+        }
+
+        &-list {
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+
+        &-link:link,
+        &-link:visited {
+            font: {
+                size: $font-size-main-nav-link;
+            }
+        }
+    }
+
+    .nav-open {
+        & .main-nav {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        & .mobile-nav-icon[name="close-outline"] {
+            display: block;
+        }
+
+        & .mobile-nav-icon[name="menu-outline"] {
+            display: none;
         }
     }
 }

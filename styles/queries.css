@@ -93,5 +93,55 @@
   .cta .btn--form {
     margin-top: 1.2rem;
   }
+  .mobile-nav-button {
+    display: block;
+  }
+  .main-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .main-nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link, .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-open .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
 }
 /*# sourceMappingURL=queries.css.map */
