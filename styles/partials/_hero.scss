@@ -19,19 +19,15 @@ $border-radius-delivered-images: 50%;
 //  WHITESPACE
 
 .hero {
-    align-items: center;
-    display: grid;
-    gap: 9.6rem;
-
-    grid: {
-        template: {
-            columns: 1fr 1fr;
-        }
+    & {
+        align-items: center;
+        display: grid;
+        gap: 9.6rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 130rem;
+        padding: 0 3.2rem;
     }
-
-    margin: 0 auto;
-    max-width: 130rem;
-    padding: 0 3.2rem;
 
     &-description {
         font: {
