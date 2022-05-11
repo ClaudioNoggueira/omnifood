@@ -1,7 +1,6 @@
 // TYPOGRAPHY
-// font families: 
-$font-stack: 'Rubik',
-    sans-serif;
+// font families:
+$font-stack: "Rubik", sans-serif;
 
 $font-size-heading-primary: 5.2rem;
 $font-size-heading-secondary: 4.4rem;
@@ -15,8 +14,8 @@ $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
-$letter-spacing-heading-primary: -.5px;
-$letter-spacing-subheading: .75px;
+$letter-spacing-heading-primary: -0.5px;
+$letter-spacing-subheading: 0.75px;
 
 $line-height-default: 1;
 $line-height-heading-primary: 1.05;
@@ -50,288 +49,288 @@ $border-radius-btn: 8px;
 //  WHITESPACE
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-    &:focus {
-        box-shadow: $box-shadow--focus;
-        outline: none;
-    }
+  &:focus {
+    box-shadow: $box-shadow--focus;
+    outline: none;
+  }
 }
 
 html {
-    // font-size: 10px;
-    // 10px / 16px = 0.625 = 62,5%
-    // Percentage of user's browser font-size setting
-    font-size: 62.5%;
-    overflow-x: hidden;
+  // font-size: 10px;
+  // 10px / 16px = 0.625 = 62,5%
+  // Percentage of user's browser font-size setting
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  //   Does not work on some browsers
+  //   scroll-behavior: smooth;
 }
 
 body {
-    color: $font-color-body;
+  color: $font-color-body;
 
-    font: {
-        family: $font-stack;
-        weight: $font-weight-default;
-    }
+  font: {
+    family: $font-stack;
+    weight: $font-weight-default;
+  }
 
-    line-height: $line-height-default;
+  line-height: $line-height-default;
 
-    // Only works if there is nothing absolutely positioned in relation to body
-    overflow-x: hidden;
+  // Only works if there is nothing absolutely positioned in relation to body
+  overflow-x: hidden;
 }
 
 strong {
-    font-weight: $font-weight-medium;
+  font-weight: $font-weight-medium;
 }
 
 // *****************************************************************
 // GENERAL REUSABLE COMPONENTS
 // *****************************************************************
 .container {
-    margin: 0 auto;
-    max-width: 120rem;
-    padding: 0 3.2rem;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 3.2rem;
 }
 
 .grid {
-    column-gap: 6.4rem;
-    display: grid;
-    // margin-bottom: 9.6rem;
-    row-gap: 8rem;
+  column-gap: 6.4rem;
+  display: grid;
+  // margin-bottom: 9.6rem;
+  row-gap: 8rem;
 
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
+  // &:last-child {
+  //     margin-bottom: 0;
+  // }
 
-    // for multiple grids within a container
-    &:not(:last-child) {
-        margin-bottom: 9.6rem;
-    }
+  // for multiple grids within a container
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
 
-    &--2-cols {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    &--3-cols {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    &--4-cols {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    &--5-cols {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  &--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
-    &--center-v {
-        align-items: center;
-    }
+  &--center-v {
+    align-items: center;
+  }
 }
 
 .link:link,
 .link:visited {
-    border-bottom: 1px solid currentColor;
-    color: $main-color;
-    display: inline-block;
-    padding-bottom: .2rem;
-    text-decoration: none;
-    transition: all 0.3s;
+  border-bottom: 1px solid currentColor;
+  color: $main-color;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 .link:hover,
 .link:active {
-    border-bottom: 1px solid transparent;
-    color: $font-color-link-hover;
+  border-bottom: 1px solid transparent;
+  color: $font-color-link-hover;
 }
 
 // HELPER CLASSES
 .margin-right-small {
-    margin-right: 1.6rem !important;
+  margin-right: 1.6rem !important;
 }
 
 .margin-bottom-medium {
-    margin-bottom: 4.8rem !important;
+  margin-bottom: 4.8rem !important;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
 // HEADINGS
 .heading {
+  &-primary,
+  &-secondary,
+  &-tertiary {
+    color: $font-color-heading;
 
-    &-primary,
-    &-secondary,
-    &-tertiary {
-        color: $font-color-heading;
-
-        font: {
-            weight: $font-weight-bold;
-        }
-
-        letter-spacing: $letter-spacing-heading-primary;
+    font: {
+      weight: $font-weight-bold;
     }
 
-    &-primary {
-        font: {
-            size: $font-size-heading-primary;
-        }
+    letter-spacing: $letter-spacing-heading-primary;
+  }
 
-        line-height: $line-height-heading-primary;
-        margin-bottom: 32px;
+  &-primary {
+    font: {
+      size: $font-size-heading-primary;
     }
 
-    &-secondary {
-        font: {
-            size: $font-size-heading-secondary;
-        }
+    line-height: $line-height-heading-primary;
+    margin-bottom: 32px;
+  }
 
-        line-height: $line-height-heading-secondary;
-        margin-bottom: 9.6rem;
+  &-secondary {
+    font: {
+      size: $font-size-heading-secondary;
     }
 
-    &-tertiary {
-        font-size: $font-size-heading-tertiary;
-        line-height: $line-height-heading-tertiary;
-        margin-bottom: 3.2rem;
-    }
+    line-height: $line-height-heading-secondary;
+    margin-bottom: 9.6rem;
+  }
+
+  &-tertiary {
+    font-size: $font-size-heading-tertiary;
+    line-height: $line-height-heading-tertiary;
+    margin-bottom: 3.2rem;
+  }
 }
 
 .subheading {
-    color: $font-color-subheading;
-    display: block;
+  color: $font-color-subheading;
+  display: block;
 
-    font: {
-        size: $font-size-subheading;
-        weight: $font-weight-medium;
-    }
+  font: {
+    size: $font-size-subheading;
+    weight: $font-weight-medium;
+  }
 
-    letter-spacing: $letter-spacing-subheading;
-    margin-bottom: 1.6rem;
-    text-transform: uppercase;
+  letter-spacing: $letter-spacing-subheading;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
 }
 
 // BUTTONS
 .btn {
-
-    &,
-    &:link,
-    &:visited {
-        border: none {
-            radius: $border-radius-btn;
-        }
-
-        cursor: pointer;
-        display: inline-block;
-
-        font: {
-            family: inherit;
-            size: $font-size-btn;
-            weight: $font-weight-semi-bold
-        }
-
-        padding: 1.6rem 3.2rem;
-        text-decoration: none;
-
-        // always put transition on the original "state"
-        transition: all 0.3s;
+  &,
+  &:link,
+  &:visited {
+    border: none {
+      radius: $border-radius-btn;
     }
 
-    &--full:link,
-    &--full:visited {
-        background-color: $main-color;
-        color: $white-color;
+    cursor: pointer;
+    display: inline-block;
+
+    font: {
+      family: inherit;
+      size: $font-size-btn;
+      weight: $font-weight-semi-bold;
     }
 
-    &--full:hover,
-    &--full:active {
-        background-color: $background-color-btn--full-hover;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+
+    // always put transition on the original "state"
+    transition: all 0.3s;
+  }
+
+  &--full:link,
+  &--full:visited {
+    background-color: $main-color;
+    color: $white-color;
+  }
+
+  &--full:hover,
+  &--full:active {
+    background-color: $background-color-btn--full-hover;
+  }
+
+  &--outline:link,
+  &--outline:visited {
+    background-color: $white-color;
+    color: $font-color-btn--outline;
+  }
+
+  &--outline:hover,
+  &--outline:active {
+    background-color: $background-color-btn--outline-hover;
+
+    // Add border inside
+    box-shadow: $box-shadow-btn--outline-hover;
+  }
+
+  &--form {
+    align-self: end;
+    background-color: $background-color-btn--form;
+    color: $font-color-btn--form;
+    padding: 1.2rem;
+
+    &:hover {
+      background-color: $background-color-btn--form-hover;
+      color: $font-color-btn--form-hover;
     }
-
-    &--outline:link,
-    &--outline:visited {
-        background-color: $white-color;
-        color: $font-color-btn--outline;
-    }
-
-    &--outline:hover,
-    &--outline:active {
-        background-color: $background-color-btn--outline-hover;
-
-        // Add border inside
-        box-shadow: $box-shadow-btn--outline-hover;
-    }
-
-    &--form {
-        align-self: end;
-        background-color: $background-color-btn--form;
-        color: $font-color-btn--form;
-        padding: 1.2rem;
-
-        &:hover {
-            background-color: $background-color-btn--form-hover;
-            color: $font-color-btn--form-hover;
-        }
-    }
+  }
 }
 
 // LISTS
 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  &-item {
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    font-size: $font-size-list-item;
     gap: 1.6rem;
-    list-style: none;
+  }
 
-    &-item {
-        align-items: center;
-        display: flex;
-        font-size: $font-size-list-item;
-        gap: 1.6rem;
-    }
-
-
-    &-icon {
-        color: $main-color;
-        height: 3rem;
-        width: 3rem;
-    }
+  &-icon {
+    color: $main-color;
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 // *****************************************************************
 // HEADER
-@import 'partials/_header.scss';
+@import "partials/_header.scss";
 
 // *****************************************************************
 // HERO
-@import 'partials/_hero.scss';
+@import "partials/_hero.scss";
 
 // *****************************************************************
 // FEATURED IN
-@import 'partials/_featured.scss';
+@import "partials/_featured.scss";
 
 // *****************************************************************
 // HOW IT WORKS
-@import 'partials/_how.scss';
+@import "partials/_how.scss";
 
 // *****************************************************************
 // MEALS
-@import 'partials/_meals.scss';
+@import "partials/_meals.scss";
 
 // *****************************************************************
 // TESTIMONIALS
-@import 'partials/_testimonials.scss';
+@import "partials/_testimonials.scss";
 
 // *****************************************************************
 // TESTIMONIALS
-@import 'partials/_pricing.scss';
+@import "partials/_pricing.scss";
 
 // *****************************************************************
 // CALL TO ACTION
-@import 'partials/_cta.scss';
+@import "partials/_cta.scss";
 
 // *****************************************************************
 // FOOTER
-@import 'partials/_footer.scss';
+@import "partials/_footer.scss";
