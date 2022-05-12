@@ -76,8 +76,14 @@
                     </div>
                 </div>
                 <div class="hero-image-box">
-                    <img loading="lazy" src="images/hero.png" class="hero-image"
-                        alt="Woman enjoying food, meals in storage container and food bowls on a table">
+                    <picture>
+                        <source srcset="images/hero.webp" type="image/webp">
+                        <source srcset="images/hero-min.png" type="image/png">
+                        <img loading="lazy" src="images/hero-min.png" class="hero-image"
+                            alt="Woman enjoying food, meals in storage container and food bowls on a table">
+                    </picture>
+                    <!-- <img loading="lazy" src="images/hero.png" class="hero-image"
+                        alt="Woman enjoying food, meals in storage container and food bowls on a table"> -->
                 </div>
             </div>
         </section>
