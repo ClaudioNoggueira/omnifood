@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Omnifood is a AI-powered food subscription that will make you eat healthy again, 365 day per year. It's tailored to your tastes and nutritional needs.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never cook again</title>
+
+    <!-- FAVICON FOR BROWSERS -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FAVICON FOR IOS HOME SCREEN -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" type="image/x-icon">
+
+    <!-- FAVICONS FROM ANDROID HOME SCREEN -->
+    <link rel="manifest" href="manifest.webmanifest">
 
     <!-- RUBIK FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +36,7 @@
 
         <nav class="main-nav">
             <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="#how-it-works">How it works</a></li>
+                <li><a class="main-nav-link" href="#how">How it works</a></li>
                 <li><a class="main-nav-link" href="#meals">Meals</a></li>
                 <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
                 <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
@@ -50,8 +61,8 @@
                         your
                         personal tastes and nutritional needs.
                     </p>
-                    <a href="#" class="btn btn--full margin-right-small">Start eating well</a>
-                    <a href="#" class="btn btn--outline">Learn more &darr;</a>
+                    <a href="#cta" class="btn btn--full margin-right-small">Start eating well</a>
+                    <a href="#how" class="btn btn--outline">Learn more &darr;</a>
                     <div class="delivered-meals">
                         <div class="delivered-images">
                             <img loading="lazy" src="images/customers/customer-1.jpg" alt="Customer photo">
@@ -65,8 +76,14 @@
                     </div>
                 </div>
                 <div class="hero-image-box">
-                    <img loading="lazy" src="images/hero.png" class="hero-image"
-                        alt="Woman enjoying food, meals in storage container and food bowls on a table">
+                    <picture>
+                        <source srcset="images/hero.webp" type="image/webp">
+                        <source srcset="images/hero-min.png" type="image/png">
+                        <img loading="lazy" src="images/hero-min.png" class="hero-image"
+                            alt="Woman enjoying food, meals in storage container and food bowls on a table">
+                    </picture>
+                    <!-- <img loading="lazy" src="images/hero.png" class="hero-image"
+                        alt="Woman enjoying food, meals in storage container and food bowls on a table"> -->
                 </div>
             </div>
         </section>
@@ -84,7 +101,7 @@
             </div>
         </section>
 
-        <section class="how-section" id="how-it-works">
+        <section class="how-section" id="how">
             <div class="container">
                 <span class="subheading">
                     How it works
@@ -533,12 +550,14 @@
                     </li>
                     <li>
                         <a class="footer-link" href="#">
-                            <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+                            <ion-icon class="social-icon" name="logo-twitter"> </ion-icon>
                         </a>
                     </li>
                 </ul>
 
-                <p class="copyright">Copyright &copy; 2022 by Omnifood Inc. All rights reserved.</p>
+                <p class="copyright">Copyright &copy; <span class="copyrightYear">2022</span> by Omnifood Inc. All
+                    rights
+                    reserved.</p>
             </div>
             <div class="column-address">
                 <p class="footer-heading">Contact Us </p>
@@ -586,6 +605,11 @@
     <!-- IONICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- SCROLL BEHAVIOR -->
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

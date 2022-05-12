@@ -8,6 +8,7 @@ $main-color: #e67e22;
 $white-color: #fff;
 
 $background-color-header: #fdf2e9;
+$background-color-sticky: rgba(255, 255, 255, 0.877);
 
 $color-mobile-nav-icon: #333;
 
@@ -17,83 +18,105 @@ $font-color-main-nav-link-hover: #cf711f;
 // BORDER RADIUS
 $border-radius-nav-cta-link: 8px;
 
+// SHADOWS
+$box-shadow-sticky: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.06);
+
 .header {
-    align-items: center;
-    background-color: $background-color-header;
-    display: flex;
-    height: 9.6rem;
-    justify-content: space-between;
-    padding: 0 4.8rem;
-    position: relative;
+  align-items: center;
+  background-color: $background-color-header;
+  display: flex;
+  height: 9.6rem;
+  justify-content: space-between;
+  padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
-    height: 2.2rem;
+  height: 2.2rem;
 }
 
 // *****************************************************************
 // NAVIGATION
 .main-nav {
+  &-link:link,
+  &-link:visited {
+    color: $font-color-main-nav-link;
+    display: inline-block;
 
-    &-link:link,
-    &-link:visited {
-        color: $font-color-main-nav-link;
-        display: inline-block;
-
-        font: {
-            size: $font-size-main-nav-link;
-            weight: $font-weight-medium;
-        }
-
-        text-decoration: none;
-        transition: all .3s;
-
-        &.nav-cta:link,
-        &.nav-cta:visited {
-            background-color: $main-color;
-            border-radius: $border-radius-nav-cta-link;
-            color: $white-color;
-            padding: 1.2rem 2.4rem;
-        }
-
-        &.nav-cta:hover,
-        &.nav-cta:active {
-            background-color: $font-color-main-nav-link-hover;
-        }
+    font: {
+      size: $font-size-main-nav-link;
+      weight: $font-weight-medium;
     }
 
-    &-link:hover,
-    &-link:active {
-        color: $font-color-main-nav-link-hover;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &.nav-cta:link,
+    &.nav-cta:visited {
+      background-color: $main-color;
+      border-radius: $border-radius-nav-cta-link;
+      color: $white-color;
+      padding: 1.2rem 2.4rem;
     }
 
-    &-list {
-        align-items: center;
-        display: flex;
-        gap: 4.8rem;
-        list-style-type: none;
+    &.nav-cta:hover,
+    &.nav-cta:active {
+      background-color: $font-color-main-nav-link-hover;
     }
+  }
+
+  &-link:hover,
+  &-link:active {
+    color: $font-color-main-nav-link-hover;
+  }
+
+  &-list {
+    align-items: center;
+    display: flex;
+    gap: 4.8rem;
+    list-style-type: none;
+  }
 }
 
 // *****************************************************************
 // MOBILE NAVIGATION
 .mobile-nav {
-    &-button {
-        border: none;
-        background: none;
-        cursor: pointer;
+  &-button {
+    border: none;
+    background: none;
+    cursor: pointer;
 
-        display: none;
+    display: none;
+  }
+
+  &-icon {
+    color: $color-mobile-nav-icon;
+    height: 4.8rem;
+    width: 4.8rem;
+
+    &[name="close-outline"] {
+      display: none;
     }
+  }
+}
 
-    &-icon {
-        color: $color-mobile-nav-icon;
-        height: 4.8rem;
-        width: 4.8rem;
+.sticky {
+  .header {
+    background-color: $background-color-sticky;
+    box-shadow: $box-shadow-sticky;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
 
-        &[name="close-outline"] {
-            display: none;
-        }
-    }
+    position: fixed;
+    top: 0;
+    bottom: 0;
 
+    width: 100%;
+    z-index: 999;
+  }
+
+  .hero-section {
+    margin-top: 9.6rem;
+  }
 }
